@@ -1,0 +1,7 @@
+---
+const { label, redirectTo } = Astro.props as { label: string, redirectTo: string };
+---
+
+<a class="border border-rose-primary text-rose-primary rounded-md flex justify-center py-3" href={redirectTo}>
+    { label }
+</a>

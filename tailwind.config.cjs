@@ -1,3 +1,5 @@
+import { m } from 'framer-motion';
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
@@ -5,6 +7,12 @@ module.exports = {
 		extend: {
 			backgroundImage: {
 				'vineyard-445w': "url('/assets/images/vineyard-445w.jpg')",
+			},
+			colors: {
+				rose: {
+					primary: '#F08E80',
+					secondary: '#FDF0E6'
+				}
 			}
 		},
 	},
