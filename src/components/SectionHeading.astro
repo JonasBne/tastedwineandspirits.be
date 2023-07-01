@@ -1,7 +1,9 @@
 ---
-const { heading } = Astro.props as { heading: string };
+const { heading, size } = Astro.props as { heading: string, size: 'small' | 'normal' };
+
+const textSize = size === 'small' ? 'text-base' : 'text-xl';
 ---
 
-<h4 class="text-rose-primary font-bold text-xl">
+<h4 class={`text-rose-primary font-bold text-xl ${textSize}`}>
     { heading }
 </h4>
