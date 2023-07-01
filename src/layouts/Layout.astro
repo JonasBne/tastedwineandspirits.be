@@ -1,36 +1,65 @@
 ---
-export interface Props {
-	title: string;
-}
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import { SEO } from "astro-seo";
 
-const { title } = Astro.props;
+const title =
+    "Test";
+const description =
+	"Test";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="description" content={description} />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="generator" content={Astro.generator} />
+        <SEO
+            title={title}
+            description={description}
+            twitter={{
+                creator: "@jnsbne",
+            }}
+            extend={{
+                link: [{ rel: "icon", href: "/favicon.ico" }],
+            }}
+        />
+        <title>{title}</title>
+    </head>
+    <body>
+        <Header />
+        <slot />
+        <Footer />
+        <style is:global>
+            html,
+            body {
+                height: 100%;
+                width: 100%;
+            }
+            body {
+                display: flex;
+                flex-direction: column;
+            }
+        </style>
+    </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-</style>
