@@ -1,6 +1,7 @@
 ---
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Card from '../../components/Card.astro';
+import SecondaryActionLink from '../../components/SecondaryActionLink.astro';
 import SectionHeading from '../../components/SectionHeading.astro';
 import { appRoutes } from '../../config/url.const';
 import Layout from '../../layouts/Layout.astro';
@@ -55,6 +56,14 @@ const wineCard = {
             <Card heading={rumCard.heading} content={rumCard.content} redirectTo={rumCard.redirectTo} />
             <Card heading={tequilaCard.heading} content={tequilaCard.content} redirectTo={tequilaCard.redirectTo} />
             <Card heading={wineCard.heading} content={wineCard.content} redirectTo={wineCard.redirectTo} />
+        </section>
+        <section class="p-8 bg-rose-secondary flex flex-col gap-y-6 mt-4">
+            <SectionHeading heading="Niet gevonden wat je zocht?" />
+            <p class="text-slate-600 font-light">
+                Heb je niet volledig je ding gevonden in ons aanbod? Of zit je nog met een vraag?
+                Aarzel dan niet om ons te contacteren. Wij helpen je graag verder!
+            </p>
+            <SecondaryActionLink label="Stel ons je vraag" redirectTo={appRoutes.contact}  />
         </section>
     </main>
 </Layout>
