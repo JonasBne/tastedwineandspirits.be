@@ -1,3 +1,55 @@
-<footer class="mt-auto">
-    <span>footer</span>
+---
+import { appRoutes } from "../config/url.const";
+
+const listItemStyles = "text-sm text-gray-800 font-light py-1";
+---
+
+<footer class="bg-gray-50 mt-auto p-6 flex flex-col">
+    <div class="flex justify-around">
+        <div>
+            <div class="text-gray-800">Sitemap</div>
+            <ul>
+                <li class={listItemStyles}>
+                    <a href={appRoutes.base}>Home</a>
+                </li>
+                <li class={listItemStyles}>
+                    <a href={appRoutes.tastings}>Tastings</a>
+                </li>
+                <li class={listItemStyles}>
+                    <a href={appRoutes.contact}>Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <div class="text-gray-800">Contact</div>
+            <ul>
+                <li class={listItemStyles}>
+                    <a
+                        href="mailto:info@tastedwineandspirits.be?subject=Aanvraag via website"
+                        >Mail ons</a
+                    >
+                </li>
+                <li class={listItemStyles}>
+                    <a href="tel:0495341870">Bel ons</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <div class="text-gray-800">Volg ons</div>
+            <ul>
+                <li class={listItemStyles}>
+                    <a
+                        href="https://instagram.com/tasted_wineandspirits?igshid=NTc4MTIwNjQ2YQ=="
+                        >Instagram</a
+                    >
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="font-light text-xs text-center mt-6 text-gray-400">
+        BTW BE 0790.831.003
+    </div>
+    <div class="font-light text-xs text-center mt-2 text-gray-400">
+        Alle rechten voorbehouden. &#169; Tasted 2023.
+    </div>
 </footer>
