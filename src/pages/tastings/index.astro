@@ -1,0 +1,60 @@
+---
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Card from '../../components/Card.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import { appRoutes } from '../../config/url.const';
+import Layout from '../../layouts/Layout.astro';
+
+const breadcrumbs = [
+    {
+        label: 'Home',
+        linkTo: appRoutes.base
+    },
+    {
+        label: 'Tastings',
+    }
+]
+
+const whiskyCard = {
+    heading: 'Whisky',
+    content: 'Complete leek of reeds de nodige ervaring? Tasted biedt voor elk wat wils. Maak een keuze uit verschillende thema\'s en laat u verrassen door de wondere wereld van whisky.',
+    redirectTo: appRoutes.tastings.whisky
+}
+
+const rumCard = {
+    heading: 'Rum',
+    content: 'Complete leek of reeds de nodige ervaring? Tasted biedt voor elk wat wils. Maak een keuze uit verschillende thema\'s en laat u verrassen door de wondere wereld van whisky.',
+    redirectTo: appRoutes.tastings.rum
+}
+
+const tequilaCard = {
+    heading: 'Tequila & Mezcal',
+    content: 'Complete leek of reeds de nodige ervaring? Tasted biedt voor elk wat wils. Maak een keuze uit verschillende thema\'s en laat u verrassen door de wondere wereld van whisky.',
+    redirectTo: appRoutes.tastings.tequila
+}
+
+const wineCard = {
+    heading: 'Wijn',
+    content: 'Complete leek of reeds de nodige ervaring? Tasted biedt voor elk wat wils. Maak een keuze uit verschillende thema\'s en laat u verrassen door de wondere wereld van whisky.',
+    redirectTo: appRoutes.tastings.wine
+}
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<section class="bg-rose-secondary rounded-br-[75px] p-4">
+            <Breadcrumbs breadcrumbs={breadcrumbs} />
+			<p class="mt-3 font-light leading-7">
+				Tasted verzorgt uw wijn- en spiritstastings op maat. Altijd al meer willen weten over wijn?
+                Fan van een lekker glas whisky of rum, maar geen idee waar te beginnen? Ontdek ons gevarieerd aanbod!
+			</p>
+		</section>	
+        <section class="flex flex-col gap-y-10 p-4 mt-4">
+            <SectionHeading heading="Ready, set... Taste!" />
+            <Card heading={whiskyCard.heading} content={whiskyCard.content} redirectTo={whiskyCard.redirectTo} />
+            <Card heading={rumCard.heading} content={rumCard.content} redirectTo={rumCard.redirectTo} />
+            <Card heading={tequilaCard.heading} content={tequilaCard.content} redirectTo={tequilaCard.redirectTo} />
+            <Card heading={wineCard.heading} content={wineCard.content} redirectTo={wineCard.redirectTo} />
+        </section>
+    </main>
+</Layout>
