@@ -22,7 +22,9 @@ const NavBar = () => {
 
     return (
         <nav className="bg-gray-100 flex items-center justify-between">
-            <img alt="test" src={Logo} className="h-10" />
+            <a href={appRoutes.base}>
+                <img alt="test" src={Logo} className="h-10" />
+            </a>
 
             {
                 !isMobile && (

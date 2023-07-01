@@ -1,0 +1,46 @@
+---
+export interface Breadcrumb {
+    label: string;
+    linkTo?: string;
+}
+
+export interface Props {
+    breadcrumbs: Breadcrumb[];
+}
+
+const { breadcrumbs } = Astro.props;
+---
+
+<ul class="breadcrumb">
+    {
+        breadcrumbs.map((breadcrumb) => (
+            <li class="text-sm">
+                {breadcrumb.linkTo ? (
+                    <a href={breadcrumb.linkTo}>
+                        <p>{breadcrumb.label}</p>
+                    </a>
+                ) : (
+                    <p>{breadcrumb.label}</p>
+                )}
+            </li>
+        ))
+    }
+</ul>
+
+<style>
+    ul.breadcrumb {
+        list-style: none;
+    }
+
+    ul.breadcrumb li {
+        display: inline-flex;
+        align-items: center;
+        font-weight: lighter;
+    }
+
+    /* Add a slash symbol (/) before/behind each list item */
+    ul.breadcrumb li + li:before {
+        padding: 8px;
+        content: "/\00a0";
+    }
+</style>
