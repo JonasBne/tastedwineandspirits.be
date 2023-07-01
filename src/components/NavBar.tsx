@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useMediaQuery } from "usehooks-ts";
 import { motion } from "framer-motion";
 import { appRoutes } from "../config/url.const";
+import Logo from "/assets/logos/tasted.svg";
 
 const NavBar = () => {
     const isMobile = useMediaQuery("(max-width: 1024px)");
@@ -21,7 +22,7 @@ const NavBar = () => {
 
     return (
         <nav className="bg-gray-100 flex items-center justify-between">
-            <div>Logo</div>
+            <img alt="test" src={Logo} className="h-10" />
 
             {
                 !isMobile && (
