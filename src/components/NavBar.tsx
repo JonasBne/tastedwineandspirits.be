@@ -20,7 +20,7 @@ const NavBar = () => {
     }
 
     return (
-        <nav className="bg-gray-50 flex items-center justify-between">
+        <nav className="bg-gray-100 flex items-center justify-between">
             <div>Logo</div>
 
             {
