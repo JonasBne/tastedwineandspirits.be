@@ -1,0 +1,27 @@
+---
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import ContactForm from "../components/ContactForm.astro";
+import { appRoutes } from "../config/url.const";
+import Layout from "../layouts/Layout.astro";
+
+const breadcrumbs = [
+    { label: "Home", linkTo: appRoutes.base },
+    { label: "Contact" },
+];
+---
+
+<Layout title="Contact">
+    <div class="mx-6 mt-2">
+        <Breadcrumbs breadcrumbs={breadcrumbs} />
+    </div>
+    <div class="my-2 lg:grid lg:grid-cols-2 lg:mb-6">
+        <article class="px-6 mt-6">
+            <p class="font-bold uppercase md:text-xl">Contact</p>
+            <p class="mt-2 mb-6 font-light md:text-lg">
+                Wens je een vrijblijvende offerte te ontvangen of heb je een vraag? Stuur ons een berichtje en we helpen je
+                graag verder!
+            </p>
+            <ContactForm />
+        </article>
+    </div>
+</Layout>
