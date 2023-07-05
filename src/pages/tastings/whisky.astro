@@ -19,24 +19,24 @@ const breadcrumbs = [
         label: 'Whisky',
     }
 ]
-
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-        <div>Hier komt een afbeelding</div>
+<Layout title="Whisky tasting">
+	<main class="text-slate-800 leading-7 font-light">
         <section class="p-4">
             <Breadcrumbs breadcrumbs={breadcrumbs} />
             <SectionHeading heading="Whisky tasting" />
-            <p class="font-light text-slate-800 my-4">
+            <p class="my-4">
                 Tijdens een whiskytasting wordt u meegenomen op een reis doorheen de geschiedenis en het productieproces van deze geliefde sterke drank. 
                 U leert hoe een whisky te degusteren en wordt meegenomen in een wereld van uiteenlopende aroma’s en smaken. 
+
                 De complexiteit en diversiteit die eigen zijn aan deze spirit worden vakkundig toegelicht en u leert begrijpen waar de smaken in uw glas vandaan komen. 
                 Door een duidelijk begrip van de distilleerderij, het productieproces en de verschillende rijpingsmethoden, zal u met vernieuwd respect, liefde en kennis van uw whisky kunnen genieten.
             </p>
             <SectionHeading heading="Wat mag je verwachten?" size="small" />
-            <p class="font-light my-4 text-slate-800">Maak je keuze uit <span class="font-semibold">diverse thema's</span> zoals:</p>
-            <ul class="font-light ml-2 flex flex-col gap-y-2 mb-4 text-slate-800">
+            <p class="mt-4">Tijdens een whisky tasting van 2 uur proef je 2 cl van 6 verschillende soorten Whisky.</p>
+            <p class="mt-2 mb-4">Maak daarbij je keuze uit een van onze <span class="font-semibold">diverse thema's</span> (of stel ons je eigen thema voor) zoals:</p>
+            <ul class="ml-2 flex flex-col gap-y-2 mb-4">
                 <li>Introductie tot whisky</li>
                 <li>Invloed van het vat</li>
                 <li>Invloed van leeftijd</li>
@@ -45,13 +45,14 @@ const breadcrumbs = [
                 <li>Speyside vs. Islay whisky</li>
                 <li>Bang For Your Buck tasting</li>
             </ul>
-            <p class="font-light text-slate-800">
-                Een whisky tasting kan doorgaan <span class="font-semibold">vanaf 35 euro per persoon</span> en is geschikt voor kleine en grote groepen. Het <span class="font-semibold">minimum</span>aantal deelnemers bedraagt <span class="font-semibold">6 personen.</span>
+            <SectionHeading heading="Praktisch" size="small" />
+            <p class="mt-2">
+                Een whisky tasting kan doorgaan <span class="font-semibold">vanaf 35 euro per persoon</span> en is geschikt voor kleine en grote groepen. 
+                Het <span class="font-semibold">minimum </span>aantal deelnemers bedraagt <span class="font-semibold">6 personen.</span>
             </p>
-            <p class="font-light text-slate-800 mt-2">
-                Tijdens de tasting proef je <span class="font-semibold">2cl</span> van <span class="font-semibold">6 verschillende soorten whisky.</span>
-                De duurtijd voor de tasting bedraagt <span class="font-semibold">ongeveer 2 uur.</span> De tasting gaat door bij u thuis of op een locatie
-                naar keuze. Verplaatsingskosten worden niet aangerekend binnen een straal van 10 kilometer rond Duffel. Voor verdere verplaatsingen vragen we een vergoeding
+            <p class="mt-2">
+                De tasting gaat door bij <span class="font-semibold">u thuis of op een locatie
+                naar keuze.</span> Verplaatsingskosten worden niet aangerekend binnen een straal van 10 kilometer rond Duffel. Voor verdere verplaatsingen vragen we een vergoeding
                 van 0,37 cent per kilometer.
             </p>
         </section>
