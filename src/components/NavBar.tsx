@@ -54,7 +54,7 @@ const NavBar = () => {
             {
                 isMobile && showMenu && (
                     <motion.div animate={{ opacity: 1, x: 0}} initial={{ opacity: 0, x: 25}} className="fixed flex bg-white bottom-0 left-0 w-full h-screen items-center justify-center">
-                        <div className="flex flex-col gap-24 text-xl font-light">
+                        <div className="flex flex-col gap-24 text-3xl font-semibold">
                             <a className="text-slate-800" href={appRoutes.base}>Home</a>
                             <a className="text-slate-800" href={appRoutes.tastings.base}>Tastings</a>
                             <a className="text-slate-800" href={appRoutes.contact}>Contact</a>
