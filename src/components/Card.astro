@@ -3,7 +3,7 @@ import PrimaryActionLink from "./PrimaryActionLink.astro";
 const { heading, content, redirectTo } = Astro.props as { heading: string, content: string, redirectTo: string };
 ---
 
-<div class="border border-rose-primary flex flex-col gap-y-4 rounded-md p-6 shadow-xl">
+<div class="border border-rose-primary flex flex-col gap-y-4 rounded-md p-6 shadow-md">
     <h1 class="font-bold text-rose-primary">{heading}</h1>
     <p class="text-slate-700 font-light">{content}</p> 
     <PrimaryActionLink label="Bekijk tasting" redirectTo={redirectTo} />

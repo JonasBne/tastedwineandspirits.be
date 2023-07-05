@@ -36,7 +36,7 @@ const description =
     </head>
     <body>
         <Header />
-        <main class={styles}>
+        <main class={`${styles ? styles : ''} text-slate-900`}>
             <slot />
         </main>
         <Footer />

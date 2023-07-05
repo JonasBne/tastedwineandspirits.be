@@ -41,23 +41,25 @@ const wineCard = {
 }
 ---
 
-<Layout title="Welcome to Astro.">
-	<main class="text-slate-700">
-		<section class="bg-rose-secondary rounded-br-[75px] p-4">
-            <Breadcrumbs breadcrumbs={breadcrumbs} />
-			<p class="mt-3 font-light leading-7">
+<Layout title="Tasted - Overzicht">
+	<article>
+		<section class="bg-rose-secondary rounded-br-[75px]">
+            <nav aria-label="breadcrumbs" class="px-4 pt-2">
+                <Breadcrumbs breadcrumbs={breadcrumbs} />
+            </nav>
+			<p class="font-light leading-7 mt-2 px-4 pb-4">
 				Tasted verzorgt uw wijn- en spiritstastings op maat. Altijd al meer willen weten over wijn?
                 Fan van een lekker glas whisky of rum, maar geen idee waar te beginnen? Ontdek ons gevarieerd aanbod!
 			</p>
 		</section>	
-        <section class="flex flex-col gap-y-10 p-4 mt-4">
-            <SectionHeading heading="Ready, set... Taste!" />
+        <section class="flex flex-col mt-8 px-4 gap-y-6">
+            <SectionHeading heading="Ready, set... Taste!" size="large" />
             <Card heading={whiskyCard.heading} content={whiskyCard.content} redirectTo={whiskyCard.redirectTo} />
             <Card heading={rumCard.heading} content={rumCard.content} redirectTo={rumCard.redirectTo} />
             <Card heading={tequilaCard.heading} content={tequilaCard.content} redirectTo={tequilaCard.redirectTo} />
             <Card heading={wineCard.heading} content={wineCard.content} redirectTo={wineCard.redirectTo} />
         </section>
-        <section class="p-6 bg-rose-secondary flex flex-col gap-y-6 mt-8">
+        <section class="bg-rose-secondary flex flex-col gap-y-4 p-4 mt-8">
             <SectionHeading heading="Niet gevonden wat je zocht?" />
             <p class="font-light">
                 Heb je niet volledig je ding gevonden in ons aanbod? Of zit je nog met een vraag?
@@ -65,5 +67,5 @@ const wineCard = {
             </p>
             <SecondaryActionLink label="Stel ons je vraag" redirectTo={appRoutes.contact}  />
         </section>
-    </main>
+    </article>
 </Layout>
