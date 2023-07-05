@@ -1,0 +1,22 @@
+---
+import PrimaryActionLink from "../components/PrimaryActionLink.astro";
+import { appRoutes } from "../config/url.const";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Daar ging iets fout!">
+    <article class="px-6 mt-6">
+        <p class="font-bold text-2xl mb-4 md:text-4xl">
+            Oops, hier ging iets verkeerd...
+        </p>
+        <p class="font-light md:text-xl">
+            We kunnen de pagina die je zoekt niet vinden.
+        </p>
+        <div class="block mt-6 sm:w-fit sm:mt-10">
+            <PrimaryActionLink
+            label="Terug naar home"
+            linkTo={appRoutes.base}
+            />
+        </div>
+    </article>
+</Layout>
