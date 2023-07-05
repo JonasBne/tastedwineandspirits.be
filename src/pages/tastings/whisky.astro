@@ -1,6 +1,7 @@
 ---
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Card from '../../components/Card.astro';
+import PrimaryActionLink from '../../components/PrimaryActionLink.astro';
 import SecondaryActionLink from '../../components/SecondaryActionLink.astro';
 import SectionHeading from '../../components/SectionHeading.astro';
 import { appRoutes } from '../../config/url.const';
@@ -55,6 +56,10 @@ const breadcrumbs = [
                 naar keuze.</span> Verplaatsingskosten worden niet aangerekend binnen een straal van 10 kilometer rond Duffel. Voor verdere verplaatsingen vragen we een vergoeding
                 van 0,37 cent per kilometer.
             </p>
+            <div class="my-6 flex flex-col gap-y-4">
+				<PrimaryActionLink label="Vraag je tasting aan" redirectTo={appRoutes.contact} />
+				<SecondaryActionLink label="Terug naar het overzicht" redirectTo={appRoutes.tastings.base} />
+			</div>
         </section>
     </main>
 </Layout>
