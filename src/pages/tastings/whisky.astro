@@ -1,6 +1,5 @@
 ---
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import Card from '../../components/Card.astro';
 import PrimaryActionLink from '../../components/PrimaryActionLink.astro';
 import SecondaryActionLink from '../../components/SecondaryActionLink.astro';
 import SectionHeading from '../../components/SectionHeading.astro';
@@ -23,7 +22,7 @@ const breadcrumbs = [
 ---
 
 <Layout title="Whisky tasting">
-	<main class="text-slate-800 leading-7 font-light">
+	<article class="text-slate-800 leading-7 font-light">
         <section class="p-4">
             <Breadcrumbs breadcrumbs={breadcrumbs} />
             <SectionHeading heading="Whisky tasting" />
@@ -61,5 +60,5 @@ const breadcrumbs = [
 				<SecondaryActionLink label="Terug naar het overzicht" redirectTo={appRoutes.tastings.base} />
 			</div>
         </section>
-    </main>
+    </article>
 </Layout>
