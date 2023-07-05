@@ -22,9 +22,11 @@ const breadcrumbs = [
 ---
 
 <Layout title="Whisky tasting">
-	<article class="text-slate-800 leading-7 font-light">
+	<article class="leading-7 font-light">
         <section class="p-4">
-            <Breadcrumbs breadcrumbs={breadcrumbs} />
+            <nav aria-label="breadcrumbs" class="py-2">
+                <Breadcrumbs breadcrumbs={breadcrumbs} />
+            </nav>
             <SectionHeading heading="Whisky tasting" />
             <p class="my-4">
                 Tijdens een whiskytasting wordt u meegenomen op een reis doorheen de geschiedenis en het productieproces van deze geliefde sterke drank. 
