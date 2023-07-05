@@ -42,7 +42,7 @@ const wineCard = {
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
+	<main class="text-slate-700">
 		<section class="bg-rose-secondary rounded-br-[75px] p-4">
             <Breadcrumbs breadcrumbs={breadcrumbs} />
 			<p class="mt-3 font-light leading-7">
@@ -57,9 +57,9 @@ const wineCard = {
             <Card heading={tequilaCard.heading} content={tequilaCard.content} redirectTo={tequilaCard.redirectTo} />
             <Card heading={wineCard.heading} content={wineCard.content} redirectTo={wineCard.redirectTo} />
         </section>
-        <section class="p-6 bg-rose-secondary flex flex-col gap-y-6 mt-4">
+        <section class="p-6 bg-rose-secondary flex flex-col gap-y-6 mt-8">
             <SectionHeading heading="Niet gevonden wat je zocht?" />
-            <p class="text-slate-600 font-light">
+            <p class="font-light">
                 Heb je niet volledig je ding gevonden in ons aanbod? Of zit je nog met een vraag?
                 Aarzel dan niet om ons te contacteren. Wij helpen je graag verder!
             </p>

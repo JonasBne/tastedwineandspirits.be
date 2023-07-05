@@ -5,6 +5,6 @@ const { heading, content, redirectTo } = Astro.props as { heading: string, conte
 
 <div class="border border-rose-primary flex flex-col gap-y-4 rounded-md p-6 shadow-xl">
     <h1 class="font-bold text-rose-primary">{heading}</h1>
-    <p class="text-slate-600 font-light">{content}</p>
+    <p class="text-slate-700 font-light">{content}</p> 
     <PrimaryActionLink label="Bekijk tasting" redirectTo={redirectTo} />
 </div>
