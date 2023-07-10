@@ -5,6 +5,7 @@ import SecondaryActionLink from '../../components/SecondaryActionLink.astro';
 import SectionHeading from '../../components/SectionHeading.astro';
 import { appRoutes } from '../../config/url.const';
 import Layout from '../../layouts/Layout.astro';
+import tequila445w from '/assets/images/tequila-445w.jpg';
 
 const breadcrumbs = [
     {
@@ -23,6 +24,9 @@ const breadcrumbs = [
 
 <Layout title="Tequila & Mezcal tasting">
 	<article class="leading-7 font-light">
+        <aside>
+            <img alt="Image of agave plants" src={tequila445w} />
+        </aside>
         <section class="p-4">
             <nav aria-label="breadcrumbs" class="py-2">
                 <Breadcrumbs breadcrumbs={breadcrumbs} />

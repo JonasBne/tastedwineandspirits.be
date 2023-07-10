@@ -7,6 +7,7 @@ module.exports = {
 		extend: {
 			backgroundImage: {
 				'vineyard-445w': "url('/assets/images/vineyard-445w.jpg')",
+				'tequila-445w': 'url(/assets/images/tequila-445w.jpg)',
 			},
 			colors: {
 				rose: {
