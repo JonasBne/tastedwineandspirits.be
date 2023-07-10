@@ -6,8 +6,8 @@ module.exports = {
 	theme: {
 		extend: {
 			backgroundImage: {
-				'vineyard-445w': "url('/assets/images/vineyard-445w.jpg')",
-				'tequila-445w': 'url(/assets/images/tequila-445w.jpg)',
+				'vineyard-680w': "url('/assets/images/vineyard-680w.jpg')",
+				'vineyard-768w': "url('/assets/images/vineyard-768w.jpg')",
 			},
 			colors: {
 				rose: {

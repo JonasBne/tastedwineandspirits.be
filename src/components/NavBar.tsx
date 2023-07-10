@@ -27,13 +27,13 @@ const NavBar = () => {
 
             <ul className="hidden lg:flex lg:gap-x-12 list-none">
             <li>
-                <a className="text-slate-800 text-xl" href={appRoutes.base}>Home</a>
+                <a className="text-slate-800 text-lg" href={appRoutes.base}>Home</a>
             </li>
             <li>
-                <a className="text-slate-800 text-xl" href={appRoutes.tastings.base}>Tastings</a>
+                <a className="text-slate-800 text-lg" href={appRoutes.tastings.base}>Tastings</a>
             </li>
             <li>
-                <a className="text-slate-800 text-xl" href={appRoutes.contact}>Contact</a>
+                <a className="text-slate-800 text-lg" href={appRoutes.contact}>Contact</a>
             </li>
         </ul>
 
