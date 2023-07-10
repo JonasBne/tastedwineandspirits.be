@@ -1,0 +1,58 @@
+---
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import PrimaryActionLink from '../../components/PrimaryActionLink.astro';
+import SecondaryActionLink from '../../components/SecondaryActionLink.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import { appRoutes } from '../../config/url.const';
+import Layout from '../../layouts/Layout.astro';
+
+const breadcrumbs = [
+    {
+        label: 'Home',
+        linkTo: appRoutes.base
+    },
+    {
+        label: 'Tastings',
+        linkTo: appRoutes.tastings.base,
+    },
+    {
+        label: 'Tequila & Mezcal',
+    }
+]
+---
+
+<Layout title="Tequila & Mezcal tasting">
+	<article class="leading-7 font-light">
+        <section class="p-4">
+            <nav aria-label="breadcrumbs" class="py-2">
+                <Breadcrumbs breadcrumbs={breadcrumbs} />
+            </nav>
+            <SectionHeading heading="Tequila & Mezcal tasting" />
+            <p class="my-4">
+                Tequila staat voor veel mensen gelijk aan goedkope shots met zout en limoen of als mixer voor je zomerse margaritas. 
+                Een grote zonde vinden we dat bij Tasted. Als een van de meest complexe spirits ter wereld is tequila of mezcal nog veel te vaak ondergewaardeerd.  
+                Laat je verrassen en kom tijdens een tequila en mezcal tasting alles te weten over deze spirit die diep geworteld is in de Mexicaanse cultuur. 
+                Leer over de verschillende soorten agave die aan de basis liggen van deze drank en over de diverse manieren waarop deze agave verwerkt kan worden tot tequila of mezcal. 
+                Ontdek uiteenlopende smaakprofielen van zacht en subtiel tot krachtig en rokerig. 
+                Laat het aan Tasted over om deze spirit terug in ere te herstellen. Tequila, baby!
+            </p>
+            <SectionHeading heading="Wat mag je verwachten?" size="small" />
+            <p class="mt-4">Tijdens een tequila & mezcal tasting van 2 uur proef je 2 cl van 6 verschillende soorten tequila of mezcal.</p>
+            <p class="my-4">Tijdens een basistasting komen zowel tequila als mezcal aan bod en ligt de focus op kennismaken met de diversiteit en productiemethodes die eigen zijn aan deze spirit. Het is daarnaast altijd mogelijk om een zuivere tequila- of mezcaltasting te voorzien waarin de focus ten volle op één van beide spirits gelegd wordt.</p>
+            <SectionHeading heading="Praktisch" size="small" />
+            <p class="mt-2">
+                Een tequila & mezcal tasting kan doorgaan <span class="font-semibold">vanaf 35 euro per persoon</span> en is geschikt voor kleine en grote groepen. 
+                Het <span class="font-semibold">minimum </span>aantal deelnemers bedraagt <span class="font-semibold">6 personen.</span>
+            </p>
+            <p class="mt-2">
+                De tasting gaat door bij <span class="font-semibold">u thuis of op een locatie
+                naar keuze.</span> Verplaatsingskosten worden niet aangerekend binnen een straal van 10 kilometer rond Duffel. Voor verdere verplaatsingen vragen we een vergoeding
+                van 0,37 cent per kilometer.
+            </p>
+            <div class="my-6 flex flex-col gap-y-4">
+				<PrimaryActionLink label="Vraag je tasting aan" redirectTo={appRoutes.contact} />
+				<SecondaryActionLink label="Terug naar het overzicht" redirectTo={appRoutes.tastings.base} />
+			</div>
+        </section>
+    </article>
+</Layout>
