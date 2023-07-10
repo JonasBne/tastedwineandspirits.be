@@ -19,21 +19,21 @@ const NavBar = () => {
     }
 
     return (
-        <nav className="bg-gray-100 flex items-center justify-between">
+        <nav className="bg-gray-100 flex items-center justify-between md:bg-white">
             <a href={appRoutes.base}>
-                <img alt="Tasted logo" src={Logo} className="h-10" />
+                <img alt="Tasted logo" src={Logo} className="h-14 lg:h-20" />
             </a>
 
 
             <ul className="hidden lg:flex lg:gap-x-12 list-none">
             <li>
-                <a className="text-slate-800" href={appRoutes.base}>Home</a>
+                <a className="text-slate-800 text-xl" href={appRoutes.base}>Home</a>
             </li>
             <li>
-                <a className="text-slate-800" href={appRoutes.tastings.base}>Tastings</a>
+                <a className="text-slate-800 text-xl" href={appRoutes.tastings.base}>Tastings</a>
             </li>
             <li>
-                <a className="text-slate-800" href={appRoutes.contact}>Contact</a>
+                <a className="text-slate-800 text-xl" href={appRoutes.contact}>Contact</a>
             </li>
         </ul>
 

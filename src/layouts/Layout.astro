@@ -13,7 +13,7 @@ const description =
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full w-full">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
@@ -35,22 +35,11 @@ const description =
         />
         <title>{title}</title>
     </head>
-    <body>
+    <body class="flex flex-col max-w-[768px] m-auto h-full w-full">
         <Header />
         <main class={`${styles ? styles : ''} text-slate-900`}>
             <slot />
         </main>
         <Footer />
-        <style is:global>
-            html,
-            body {
-                height: 100%;
-                width: 100%;
-            }
-            body {
-                display: flex;
-                flex-direction: column;
-            }
-        </style>
     </body>
 </html>
