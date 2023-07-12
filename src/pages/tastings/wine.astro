@@ -1,0 +1,67 @@
+---
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import PrimaryActionLink from '../../components/PrimaryActionLink.astro';
+import SecondaryActionLink from '../../components/SecondaryActionLink.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import { appRoutes } from '../../config/url.const';
+import Layout from '../../layouts/Layout.astro';
+import whineImg from '/assets/images/vineyard.jpg';
+
+const breadcrumbs = [
+    {
+        label: 'Home',
+        linkTo: appRoutes.base
+    },
+    {
+        label: 'Tastings',
+        linkTo: appRoutes.tastings.base,
+    },
+    {
+        label: 'Wijn',
+    }
+]
+---
+
+<Layout title="Wijn tasting">
+	<article class="leading-7 font-light">
+        <aside>
+            <img alt="Image of vineyards" src={whineImg} />
+        </aside>
+        <section class="p-4">
+            <nav aria-label="breadcrumbs" class="py-2">
+                <Breadcrumbs breadcrumbs={breadcrumbs} />
+            </nav>
+            <SectionHeading heading="Wijn tasting" />
+            <p class="my-4">
+                ‘Wijn is zonlicht bij elkaar gehouden door water’, stelde Galileo Galilei. Een stelling die de aantrekkingskracht van deze drank perfect samenvat. Geen drank die wereldwijd zoveel mensen samenbrengt en beroert, waar zoveel over geschreven wordt of die zo tot de verbeelding spreekt. We genieten allemaal wel eens van een lekker glas wijn bij ons eten. 
+                Maar weten we ook waarom die wijn zo smaakt of waarom die een geschikte begeleider is van uw maaltijd?  Tijdens een wijntasting leer je waar de smaken in je wijn vandaag komen en waar de verschillen tussen wijnen ontstaan. 
+                Door dieper in te gaan op de druif, productiemethodes en terroir ontdekt u de prachtige diversiteit die deze drank rijk is. 
+            </p>
+            <SectionHeading heading="Wat mag je verwachten?" size="small" />
+            <p class="mt-4">Tijdens een wijn tasting van 2 uur proef je 6 verschillende soorten wijn.</p>
+            <p class="mt-4">Tijdens een basistasting ligt de focus op kennismaken met de diversiteit en productiemethodes die eigen zijn aan enkele gekende wijnstijlen.</p>
+            <p class="mt-2 mb-4">Daarnaast is het ook steeds mogelijk om te kiezen voor <span class="font-semibold">een thematische tasting</span> waarin de focus ligt op één of meerdere landen, streken, druiven of productiemethodes. Mogelijke voorbeelden zijn:</p>
+            <ul class="ml-2 flex flex-col gap-y-2 mb-4">
+                <li>Franse, Italiaanse of Spaanse wijnen</li>
+                <li>Wijnen uit Bordeaux, Loire, Piëmonte, Toscane,...</li>
+                <li>Tasting rond druiven zoals pinot noir, riesling, syrah/shiraz, chardonnay,...</li>
+                <li>Vergelijking oude wereld vs. nieuwe wereld</li>
+                <li>Invloed van rijping</li>
+                <li>...</li>
+            </ul>
+            <SectionHeading heading="Praktisch" size="small" />
+            <p class="mt-2">
+                Een wijn tasting kan doorgaan <span class="font-semibold">vanaf 35 euro per persoon</span> en is geschikt voor kleine en grote groepen. 
+                Het <span class="font-semibold">minimum </span>aantal deelnemers bedraagt <span class="font-semibold">6 personen.</span>
+            </p>
+            <p class="mt-2">
+                De tasting gaat door bij <span class="font-semibold">u thuis of op een locatie
+                naar keuze.</span> Verplaatsingskosten worden niet aangerekend binnen een straal van 10 kilometer rond Duffel. Voor verdere verplaatsingen wordt een vergoeding per km aangerekend.
+            </p>
+            <div class="my-6 flex flex-col gap-y-4">
+				<PrimaryActionLink label="Vraag je tasting aan" redirectTo={appRoutes.contact} />
+				<SecondaryActionLink label="Terug naar het overzicht" redirectTo={appRoutes.tastings.base} />
+			</div>
+        </section>
+    </article>
+</Layout>
