@@ -2,8 +2,14 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { appRoutes } from "../config/url.const";
 import Logo from "/assets/logos/tasted.svg";
+import classNames from "classnames";
+
+const defaultListItemStyles =
+    "text-gray-800 font-light mx-2 text-sm md:text-lg md:mx-4";
+const activeListItemStyles = "text-gray-800 border-b-[1px] border-gray-800";
 
 const NavBar = () => {
+    const pathName = typeof window === 'undefined' ? appRoutes.base : window.location.pathname;
     const [initialRenderComplete, setInitialRenderComplete] = useState(false);
     const [showMenu, setShowMenu] = useState(false);
 
@@ -26,14 +32,14 @@ const NavBar = () => {
 
 
             <ul className="hidden lg:flex lg:gap-x-12 list-none">
-            <li>
-                <a className="text-slate-800 text-lg" href={appRoutes.base}>Home</a>
+            <li className={classNames(defaultListItemStyles, pathName === appRoutes.base && activeListItemStyles, 'invisible md:visible' )}>
+                <a href={appRoutes.base}>Home</a>
             </li>
-            <li>
-                <a className="text-slate-800 text-lg" href={appRoutes.tastings.base}>Tastings</a>
+            <li className={classNames(defaultListItemStyles, pathName.includes(appRoutes.tastings.base) && activeListItemStyles, 'invisible md:visible' )}>
+                <a href={appRoutes.tastings.base}>Tastings</a>
             </li>
-            <li>
-                <a className="text-slate-800 text-lg" href={appRoutes.contact}>Contact</a>
+            <li className={classNames(defaultListItemStyles, (pathName.includes(appRoutes.contact) || pathName.includes(appRoutes.success)) && activeListItemStyles, 'invisible md:visible' )}>
+                <a href={appRoutes.contact}>Contact</a>
             </li>
         </ul>
 

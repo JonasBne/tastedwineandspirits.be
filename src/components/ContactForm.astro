@@ -1,4 +1,5 @@
 ---
+import { appRoutes } from "../config/url.const";
 const inputLabelStyles =
     "block uppercase tracking-wide text-gray-700 text-xs font-light mb-2";
 
@@ -9,7 +10,7 @@ const inputFieldStyles =
 <form
     data-netlify="true"
     netlify-honeypot="bot-field"
-    action="/succes"
+    action={appRoutes.success}
     name="contact"
     method="POST"
 >

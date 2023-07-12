@@ -8,4 +8,5 @@ export const appRoutes = {
         tequila: '/tastings/tequila-mezcal',
         wine: '/tastings/wine',
     },
+    success: '/succes'
 }
