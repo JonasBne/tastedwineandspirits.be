@@ -1,5 +1,6 @@
 ---
 import PrimaryActionLink from "../components/PrimaryActionLink.astro";
+import { appRoutes } from "../config/url.const";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -10,10 +11,11 @@ import Layout from "../layouts/Layout.astro";
             We hebben je bericht goed ontvangen en contacteren je zo spoedig
             mogelijk.
         </p>
+        <div class="block mt-6 sm:w-fit sm:mt-10">
         <PrimaryActionLink
             label="Terug naar het overzicht"
-            linkTo="/"
-            styles="block mt-6 sm:w-fit sm:mt-10"
+            linkTo={appRoutes.base}
         />
+        </div>
     </article>
 </Layout>
