@@ -1,11 +1,13 @@
 ---
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CloudinaryImage from '../../components/CloudinaryImage.astro';
 import PrimaryActionLink from '../../components/PrimaryActionLink.astro';
 import SecondaryActionLink from '../../components/SecondaryActionLink.astro';
 import SectionHeading from '../../components/SectionHeading.astro';
 import { appRoutes } from '../../config/url.const';
 import Layout from '../../layouts/Layout.astro';
-import whineImg from '/assets/images/vineyard.jpg';
+
+const imageSrc = "tastedwineandspirits/vineyard.jpg"
 
 const description = "Zin om je basiskennis over wijn op te frissen? Altijd al meer willen weten over die ene wijnregio of druif? Weet je in de winkel nooit goed wat kiezen? Voor een wijntasting is elk excuus geldig!"
 
@@ -27,7 +29,7 @@ const breadcrumbs = [
 <Layout title="Wijn tasting" seoDescription={description}>
 	<article class="leading-7 font-light">
         <aside>
-            <img alt="Image of vineyards" src={whineImg} />
+            <CloudinaryImage alt="Image of vineyards" src={imageSrc} height="100%" width="100%" />
         </aside>
         <section class="p-4">
             <nav aria-label="breadcrumbs" class="py-2">

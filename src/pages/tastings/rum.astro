@@ -1,11 +1,13 @@
 ---
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CloudinaryImage from '../../components/CloudinaryImage.astro';
 import PrimaryActionLink from '../../components/PrimaryActionLink.astro';
 import SecondaryActionLink from '../../components/SecondaryActionLink.astro';
 import SectionHeading from '../../components/SectionHeading.astro';
 import { appRoutes } from '../../config/url.const';
 import Layout from '../../layouts/Layout.astro';
-import rumImg from '/assets/images/rum.jpg';
+
+const imageSrc = "tastedwineandspirits/rum.jpg"
 
 const description = "Liever een trip naar meer tropische oorden? Met een rumtasting bent u zo in de juiste sfeer. Ontdek deze prachtige spirit die zoveel meer is dan slechts een ingrediënt in cocktails."
 
@@ -27,7 +29,7 @@ const breadcrumbs = [
 <Layout title="Rum tasting" seoDescription={description}>
 	<article class="leading-7 font-light">
         <aside>
-            <img alt="Image of rum glass" src={rumImg} />
+            <CloudinaryImage alt="Image of rum glass" src={imageSrc} height="100%" width="100%" />
         </aside>
         <section class="p-4">
             <nav aria-label="breadcrumbs" class="py-2">
