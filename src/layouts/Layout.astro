@@ -9,7 +9,7 @@ const description =
 	"Tasted verzorgt uw wijn- en spiritstastings op maat. Altijd al meer willen weten over wijn? Fan van een lekker glas whisky of rum, \n\
     maar geen idee waar te beginnen? Ontdek de mogelijkheden en samen maken we er een heerlijke ervaring van. Heb je een vraag of wens je een vrijblijvende offerte? Stuur ons een berichtje en wij nemen spoedig contact met je op."
 
-    const { styles } = Astro.props as { styles?: string }
+    const { seoDescription, styles } = Astro.props as { seoDescription?: string, styles?: string }
 ---
 
 <!DOCTYPE html>
@@ -17,7 +17,7 @@ const description =
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
-        <meta name="description" content={description} />
+        <meta name="description" content={seoDescription ?? description} />
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -25,7 +25,7 @@ const description =
         <meta name="generator" content={Astro.generator} />
         <SEO
             title={title}
-            description={description}
+            description={seoDescription ?? description}
             twitter={{
                 creator: "@jnsbne",
             }}

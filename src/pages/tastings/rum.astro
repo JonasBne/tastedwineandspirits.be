@@ -7,6 +7,8 @@ import { appRoutes } from '../../config/url.const';
 import Layout from '../../layouts/Layout.astro';
 import rumImg from '/assets/images/rum.jpg';
 
+const description = "Liever een trip naar meer tropische oorden? Met een rumtasting bent u zo in de juiste sfeer. Ontdek deze prachtige spirit die zoveel meer is dan slechts een ingrediënt in cocktails."
+
 const breadcrumbs = [
     {
         label: 'Home',
@@ -22,7 +24,7 @@ const breadcrumbs = [
 ]
 ---
 
-<Layout title="Rum tasting">
+<Layout title="Rum tasting" seoDescription={description}>
 	<article class="leading-7 font-light">
         <aside>
             <img alt="Image of rum glass" src={rumImg} />

@@ -6,7 +6,7 @@ export const appRoutes = {
         whisky: '/tastings/whisky',
         rum: '/tastings/rum',
         tequila: '/tastings/tequila-mezcal',
-        wine: '/tastings/wine',
+        wine: '/tastings/wijn',
     },
     success: '/succes'
 }

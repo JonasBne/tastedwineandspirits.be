@@ -7,6 +7,8 @@ import { appRoutes } from '../../config/url.const';
 import Layout from '../../layouts/Layout.astro';
 import whineImg from '/assets/images/vineyard.jpg';
 
+const description = "Zin om je basiskennis over wijn op te frissen? Altijd al meer willen weten over die ene wijnregio of druif? Weet je in de winkel nooit goed wat kiezen? Voor een wijntasting is elk excuus geldig!"
+
 const breadcrumbs = [
     {
         label: 'Home',
@@ -22,7 +24,7 @@ const breadcrumbs = [
 ]
 ---
 
-<Layout title="Wijn tasting">
+<Layout title="Wijn tasting" seoDescription={description}>
 	<article class="leading-7 font-light">
         <aside>
             <img alt="Image of vineyards" src={whineImg} />

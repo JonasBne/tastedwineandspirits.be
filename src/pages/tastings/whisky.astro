@@ -7,6 +7,9 @@ import { appRoutes } from '../../config/url.const';
 import Layout from '../../layouts/Layout.astro';
 import whiskyImg from '/assets/images/whisky.jpg';
 
+const description =
+	"Complete leek of reeds de nodige ervaring? Tasted biedt voor elk wat wils. Maak een keuze uit verschillende thema\’s en laat u verrassen door de wondere wereld van whisky."
+
 const breadcrumbs = [
     {
         label: 'Home',
@@ -22,7 +25,7 @@ const breadcrumbs = [
 ]
 ---
 
-<Layout title="Whisky tasting">
+<Layout title="Whisky tasting" seoDescription={description}>
 	<article class="leading-7 font-light">
         <aside>
             <img alt="Image whisky glasses" src={whiskyImg} />

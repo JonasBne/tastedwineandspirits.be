@@ -7,6 +7,8 @@ import { appRoutes } from '../../config/url.const';
 import Layout from '../../layouts/Layout.astro';
 import tequilaImg from '/assets/images/tequila.jpg';
 
+const description = "Zout, limoen en een shot tequila? Niets van bij Tasted. Wij kiezen voor kwaliteit. Met een tequila- en mezcaltasting ontdekt u een van de meest complexe spirits ter wereld."
+
 const breadcrumbs = [
     {
         label: 'Home',
@@ -22,7 +24,7 @@ const breadcrumbs = [
 ]
 ---
 
-<Layout title="Tequila & Mezcal tasting">
+<Layout title="Tequila & Mezcal tasting" seoDescription={description}>
 	<article class="leading-7 font-light">
         <aside>
             <img alt="Image of agave plants" src={tequilaImg} />
