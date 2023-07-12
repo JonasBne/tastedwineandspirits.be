@@ -24,7 +24,7 @@ const whiskyCard = {
 
 const rumCard = {
     heading: 'Rum',
-    content: ': Liever een trip naar meer tropische oorden? Met een rumtasting bent u zo in de juiste sfeer. Ontdek deze prachtige spirit die zoveel meer is dan slechts een ingrediënt in cocktails.',
+    content: 'Liever een trip naar meer tropische oorden? Met een rumtasting bent u zo in de juiste sfeer. Ontdek deze prachtige spirit die zoveel meer is dan slechts een ingrediënt in cocktails.',
     redirectTo: appRoutes.tastings.rum
 }
 
@@ -51,12 +51,14 @@ const wineCard = {
 			    Tasted verzorgt uw wijn- en spiritstastings op maat. Altijd al meer willen weten over wijn? Fan van een lekker glas whisky of rum, maar geen idee waar te beginnen? Ontdek ons gevarieerd aanbod!
 			</p>
 		</section>	
-        <section class="flex flex-col mt-8 px-4 gap-y-6">
+        <section class="mt-8 px-4 md:px-0">
             <SectionHeading heading="Ready, set... Taste!" size="large" />
-            <Card heading={whiskyCard.heading} content={whiskyCard.content} redirectTo={whiskyCard.redirectTo} />
-            <Card heading={rumCard.heading} content={rumCard.content} redirectTo={rumCard.redirectTo} />
-            <Card heading={tequilaCard.heading} content={tequilaCard.content} redirectTo={tequilaCard.redirectTo} />
-            <Card heading={wineCard.heading} content={wineCard.content} redirectTo={wineCard.redirectTo} />
+            <div class="grid grid-cols-1 gap-y-6 mt-4 md:grid-cols-2 md:gap-x-4">
+                <Card heading={whiskyCard.heading} content={whiskyCard.content} redirectTo={whiskyCard.redirectTo} />
+                <Card heading={rumCard.heading} content={rumCard.content} redirectTo={rumCard.redirectTo} />
+                <Card heading={tequilaCard.heading} content={tequilaCard.content} redirectTo={tequilaCard.redirectTo} />
+                <Card heading={wineCard.heading} content={wineCard.content} redirectTo={wineCard.redirectTo} />
+            </div>
         </section>
         <section class="bg-rose-secondary flex flex-col gap-y-4 p-4 mt-8">
             <SectionHeading heading="Niet gevonden wat je zocht?" />
@@ -64,7 +66,9 @@ const wineCard = {
                 Heb je niet volledig je ding gevonden in ons aanbod? Of zit je nog met een vraag?
                 Aarzel dan niet om ons te contacteren. Wij helpen je graag verder!
             </p>
+            <div class="md:flex md:w-full md:justify-center">
             <SecondaryActionLink label="Stel ons je vraag" redirectTo={appRoutes.contact}  />
+            </div>
         </section>
     </article>
 </Layout>
