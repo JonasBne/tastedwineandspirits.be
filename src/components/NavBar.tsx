@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { appRoutes } from "../config/url.const";
+import { appRoutes, externalLinks } from "../config/url.const";
 import Logo from "/assets/logos/tasted.svg";
+import InstagramIcon from '/assets/icons/instagram.svg';
+import FacebookIcon from '/assets/icons/facebook.svg';
 import classNames from "classnames";
 
 const defaultListItemStyles =
@@ -54,10 +56,20 @@ const NavBar = () => {
         {
             showMenu && (
                 <motion.div animate={{ opacity: 1, x: 0}} initial={{ opacity: 0, x: 25}} className="fixed flex bg-white bottom-0 left-0 w-full h-screen items-center justify-center lg:hidden">
-                    <div className="flex flex-col items-center justify-center gap-24 text-3xl font-semibold">
-                        <a className="text-slate-800" href={appRoutes.base}>Home</a>
-                        <a className="text-slate-800" href={appRoutes.tastings.base}>Tastings</a>
-                        <a className="text-slate-800" href={appRoutes.contact}>Contact</a>
+                    <div className="flex flex-col items-center justify-evenly h-full">
+                        <div className="flex flex-col items-center justify-center gap-24 text-3xl font-semibold">
+                            <a className="text-slate-800" href={appRoutes.base}>Home</a>
+                            <a className="text-slate-800" href={appRoutes.tastings.base}>Tastings</a>
+                            <a className="text-slate-800" href={appRoutes.contact}>Contact</a>
+                        </div>
+                        <div className="flex items-center gap-x-8">
+                            <a href={externalLinks.instagram}>
+                            <img alt="Instagram icon" src={InstagramIcon} />
+                            </a>
+                            <a href={externalLinks.facebook}>
+                            <img alt="Facebook" src={FacebookIcon} />
+                            </a>
+                        </div>
                     </div>
                 </motion.div>
             )

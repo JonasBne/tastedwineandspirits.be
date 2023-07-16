@@ -10,3 +10,8 @@ export const appRoutes = {
     },
     success: '/succes'
 }
+
+export const externalLinks = {
+    instagram: 'https://instagram.com/tasted_wineandspirits?igshid=NTc4MTIwNjQ2YQ==',
+    facebook: 'https://www.facebook.com/profile.php?id=100094659281125',
+}
