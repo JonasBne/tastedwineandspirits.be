@@ -33,7 +33,7 @@ const NavBar = () => {
             </a>
 
 
-            <ul className="hidden lg:flex lg:gap-x-12 list-none">
+            <ul className="hidden lg:flex lg:gap-x-12 lg:items-center list-none">
             <li className={classNames(defaultListItemStyles, pathName === appRoutes.base && activeListItemStyles, 'invisible md:visible' )}>
                 <a href={appRoutes.base}>Home</a>
             </li>
@@ -42,6 +42,16 @@ const NavBar = () => {
             </li>
             <li className={classNames(defaultListItemStyles, (pathName.includes(appRoutes.contact) || pathName.includes(appRoutes.success)) && activeListItemStyles, 'invisible md:visible' )}>
                 <a href={appRoutes.contact}>Contact</a>
+            </li>
+            <li>
+                <a href={externalLinks.instagram}>
+                <img alt="Instagram icon" src={InstagramIcon} />
+                </a>
+            </li>
+            <li>
+                <a href={externalLinks.facebook}>
+                <img alt="Facebook icon" src={FacebookIcon} />
+                </a>
             </li>
         </ul>
 
