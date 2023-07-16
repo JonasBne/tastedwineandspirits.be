@@ -72,7 +72,7 @@ const NavBar = () => {
                             <a className="text-slate-800" href={appRoutes.tastings.base}>Tastings</a>
                             <a className="text-slate-800" href={appRoutes.contact}>Contact</a>
                         </div>
-                        <div className="flex items-center gap-x-8">
+                        <div className="flex items-center justify-evenly w-full">
                             <a href={externalLinks.instagram}>
                             <img alt="Instagram icon" src={InstagramIcon} />
                             </a>
